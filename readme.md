@@ -10,7 +10,7 @@ This will load a wordpress install on `localhost:8888` with woocomerce, shopfron
 
 ## Reproducing the issue
 
-Once everything is loaded head to [http://localhost:8888/checkout/order-pay/58/?pay_for_order=true&key=wc_order_2jw2UT4xADHU3] and log in with user `admin` and password `admin`. _If_ I've set everything up right you should get a payment page where the loader just spins after you click "Pay for order".
+Once everything is loaded head to <http://localhost:8888/checkout/order-pay/58/?pay_for_order=true&key=wc_order_2jw2UT4xADHU3> and log in with user `admin` and password `admin`. _If_ I've set everything up right you should get a payment page where the loader just spins after you click "Pay for order".
 
 The payment gateway will still load if you go through the [checkout](http://localhost:8888/checkout/).
 
