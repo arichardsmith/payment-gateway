@@ -16,6 +16,8 @@ The payment gateway will still load if you go through the [checkout](http://loca
 
 ## Ideas
 
-When I was trying to work this out on our own site, I ended up digging into the woocommerce checkout script and it looks like it handles the [checkout](https://github.com/woocommerce/woocommerce/blob/7ef18a587929e7c08cc9a54ce41522c41d228eda/plugins/woocommerce/legacy/js/frontend/checkout.js#L35) from different to the [customer payment form](https://github.com/woocommerce/woocommerce/blob/7ef18a587929e7c08cc9a54ce41522c41d228eda/plugins/woocommerce/legacy/js/frontend/checkout.js#L27). The checkout handler submits with AJAX and sets `window.location` with the redirected url, so the javascript excutes. But the customer payment form hits the server, so redirecting to a `javascript:` url doesn't work.
+I figure I'll share what I found out when I was trying to work this out on our own site.
+
+I ended up digging into the woocommerce checkout script and it looks like it handles the [checkout](https://github.com/woocommerce/woocommerce/blob/7ef18a587929e7c08cc9a54ce41522c41d228eda/plugins/woocommerce/legacy/js/frontend/checkout.js#L35) from different to the [customer payment form](https://github.com/woocommerce/woocommerce/blob/7ef18a587929e7c08cc9a54ce41522c41d228eda/plugins/woocommerce/legacy/js/frontend/checkout.js#L27). The checkout handler submits with AJAX and sets `window.location` with the redirected url, so the javascript excutes. But the customer payment form hits the server, so redirecting to a `javascript:` url doesn't work.
 
 Hope this helps ¯\_(ツ)_/¯
